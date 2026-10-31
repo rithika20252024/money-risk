@@ -19,7 +19,7 @@ services:
       dockerfile: deployment/Dockerfile
     container_name: reconguard_service
     ports:
-      - "8501:8501"
+      - "8000:8000"
     environment:
       - EXASOL_HOST=exasoldb:8563
       - EXASOL_USER=sys

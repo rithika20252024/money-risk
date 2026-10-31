@@ -24,3 +24,9 @@ __pycache__/
 *.sqlite
 data/cache/
 logs/*.log
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+.npm
+

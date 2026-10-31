@@ -24,6 +24,7 @@ fi
 echo "[2/3] Running automated verification test suite..."
 PYTHONPATH=. .venv/bin/pytest tests/test_reconciliation.py -v
 
-# Launch Streamlit Dashboard
-echo "[3/3] Launching ReconGuard Dashboard at http://localhost:8501..."
-.venv/bin/streamlit run app.py
+# Launch ReconGuard React + TypeScript Dashboard
+echo "[3/3] Launching ReconGuard React Dashboard at http://localhost:8000..."
+echo "Open http://localhost:8000 in your browser to explore the dashboard."
+.venv/bin/python3 server.py

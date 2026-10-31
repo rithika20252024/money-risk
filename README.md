@@ -119,18 +119,24 @@ money-risk/
 ├── README.md                       # Complete Project Documentation & Guide
 ├── requirements.txt                # Python Dependencies
 ├── run.sh                          # One-Click Run & Test Script
+├── server.py                       # High-Performance API Server & Static Asset Host
 ├── reconstruct_dataset.py          # Synthetic Multi-Rail Financial Data Generator
 ├── exasol_engine.py                # Exasol Personal Client & Columnar Twin Engine
 ├── agent_orchestrator.py           # Gemini Flash Orchestrator & Zero-PII Sanitizer
 ├── governance_ledger.py            # Shadow Branch Isolation & Byte-for-Byte Undo
-├── app.py                          # Streamlit Interactive Operations Dashboard
 ├── demo_video_guide.md             # 3-Minute Video Demo Timestamped Script
+├── frontend/                       # Modern React 19 + TypeScript + Tailwind Dashboard
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── src/
+│   │   ├── App.tsx                 # Sleek Fintech Operations Dashboard
+│   │   ├── types.ts                # Domain TypeScript Interfaces
+│   │   └── index.css               # Modern Dark Fintech Theme
+│   └── dist/                       # Production Compiled Bundle
 ├── sql/
 │   ├── schema.sql                  # Exasol Personal Schema DDL & Constraints
 │   └── reconciliation.sql          # In-Memory Parallel Reconciliation Queries
-├── pitch_deck/
-│   ├── pitch_deck.html             # Presentation-Ready Interactive HTML Slide Deck
-│   └── pitch_deck.md               # Presentation Script & Slide Breakdown
+├── pitch_deck/                     # Pitch Deck Directory (PPT Upload)
 ├── deployment/
 │   ├── docker-compose.yml          # Exasol Personal Container + App Deployment
 │   └── Dockerfile                  # Application Container Build File
@@ -149,7 +155,7 @@ git clone https://github.com/rithika20252024/money-risk.git
 cd money-risk
 ./run.sh
 ```
-This script sets up the virtual environment, executes the automated test suite, and launches the web dashboard at `http://localhost:8501`.
+This script sets up the Python environment, executes the automated test suite, and launches the React + TypeScript web dashboard at **`http://localhost:8000`**.
 
 ---
 
@@ -160,7 +166,7 @@ This script sets up the virtual environment, executes the automated test suite, 
    cd money-risk
    ```
 
-2. **Create and activate a virtual environment**:
+2. **Set up Python Virtual Environment**:
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
@@ -173,11 +179,11 @@ This script sets up the virtual environment, executes the automated test suite, 
    PYTHONPATH=. pytest tests/test_reconciliation.py -v
    ```
 
-4. **Launch the Dashboard**:
+4. **Launch the Application**:
    ```bash
-   streamlit run app.py
+   python3 server.py
    ```
-   Open your browser to [http://localhost:8501](http://localhost:8501).
+   Open your browser to [http://localhost:8000](http://localhost:8000).
 
 ---
 
@@ -188,7 +194,7 @@ cd deployment
 docker compose up --build
 ```
 - Exasol Personal runs on port `8563`.
-- ReconGuard Dashboard runs on port `8501`.
+- ReconGuard Dashboard runs on port `8000`.
 
 ---
 
@@ -214,7 +220,7 @@ PYTHONPATH=. .venv/bin/pytest tests/test_reconciliation.py -v
 | :--- | :--- | :--- |
 | **Problem Statement** | [README.md #Problem-Statement](#-problem-statement-who-has-the-problem-and-why-it-matters) | ✅ Complete |
 | **Public Code Repository** | [github.com/rithika20252024/money-risk](https://github.com/rithika20252024/money-risk) | ✅ Complete |
-| **Pitch Deck** | [pitch_deck/pitch_deck.html](pitch_deck/pitch_deck.html) & [pitch_deck/pitch_deck.md](pitch_deck/pitch_deck.md) | ✅ Complete |
+| **Pitch Deck Folder** | [pitch_deck/](pitch_deck/) (Ready for PPT upload) | ✅ Ready |
 | **Short Demo Video Guide** | [demo_video_guide.md](demo_video_guide.md) (< 3 minutes) | ✅ Complete |
 | **Clean README & Architecture** | [README.md](README.md) | ✅ Complete |
 | **Deployment & Run Guide** | [deployment/docker-compose.yml](deployment/docker-compose.yml) & [run.sh](run.sh) | ✅ Complete |
