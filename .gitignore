@@ -1,0 +1,26 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS and IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data & Output cache
+*.parquet
+*.db
+*.sqlite
+data/cache/
+logs/*.log

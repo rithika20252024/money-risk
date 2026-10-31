@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Exasol Personal Database Container
+  exasoldb:
+    image: exasol/docker-db:latest
+    container_name: exasol_personal_recon
+    privileged: true
+    ports:
+      - "8563:8563"
+    environment:
+      - EXA_MEM_SIZE=2GiB
+    restart: unless-stopped
+
+  # ReconGuard Application & Streamlit UI
+  recongard_app:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: reconguard_service
+    ports:
+      - "8501:8501"
+    environment:
+      - EXASOL_HOST=exasoldb:8563
+      - EXASOL_USER=sys
+      - EXASOL_PASSWORD=exasol
+    depends_on:
+      - exasoldb
+    restart: unless-stopped
