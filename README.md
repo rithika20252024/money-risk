@@ -1,4 +1,4 @@
-# 🛡️ ReconGuard
+#  ReconGuard
 ### Autonomous High-Throughput Financial Reconciliation & Governed Suspense Account Resolution
 **ExaThon India 2026** — *The Exasol Open Build Challenge*  
 **Track 01**: Money, Risk & Regulation  
