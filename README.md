@@ -8,14 +8,14 @@
 ---
 
 [![Exasol Personal](https://img.shields.io/badge/Data%20Platform-Exasol%20Personal-blue.svg)](https://www.exasol.com/personal/)
-[![AI Orchestration](https://img.shields.io/badge/AI%20Model-Gemini%20Flash-orange.svg)](https://deepmind.google/technologies/gemini/)
+
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-green.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Tests Passing](https://img.shields.io/badge/Tests-5%2F5%20Passing-brightgreen.svg)](tests/test_reconciliation.py)
 
 ---
 
-## 📌 Problem Statement: Who Has the Problem and Why It Matters
+## 📌 Problem Statement: 
 
 ### The Core Problem (Track 01: *Reconciliation cycles that never fully close* & *Month-end close consuming a full week*)
 Banks, NBFCs, payment aggregators (UPI, Razorpay, Stripe), and capital market participants process tens of millions of transactions every day. However:
