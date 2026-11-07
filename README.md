@@ -221,7 +221,6 @@ PYTHONPATH=. .venv/bin/pytest tests/test_reconciliation.py -v
 | **Problem Statement** | [README.md #Problem-Statement](#-problem-statement-who-has-the-problem-and-why-it-matters) | ✅ Complete |
 | **Public Code Repository** | [github.com/rithika20252024/money-risk](https://github.com/rithika20252024/money-risk) | ✅ Complete |
 | **Pitch Deck Folder** | [pitch_deck/](pitch_deck/) | ✅ Ready |
-
 | **Clean README & Architecture** | [README.md](README.md) | ✅ Complete |
 | **Deployment & Run Guide** | [deployment/docker-compose.yml](deployment/docker-compose.yml) & [run.sh](run.sh) | ✅ Complete |
 | **Open-Source License** | [LICENSE](LICENSE) (MIT) | ✅ Complete |
