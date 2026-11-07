@@ -102,7 +102,18 @@ class ReconAPIHandler(BaseHTTPRequestHandler):
             file_path = os.path.join(dist_dir, rel_path) if rel_path else os.path.join(dist_dir, "index.html")
 
             if os.path.exists(file_path) and os.path.isfile(file_path):
-                mime, _ = mimetypes.guess_type(file_path)
+                if file_path.endswith(".js") or file_path.endswith(".mjs"):
+                    mime = "application/javascript"
+                elif file_path.endswith(".css"):
+                    mime = "text/css"
+                elif file_path.endswith(".svg"):
+                    mime = "image/svg+xml"
+                elif file_path.endswith(".json"):
+                    mime = "application/json"
+                elif file_path.endswith(".html"):
+                    mime = "text/html"
+                else:
+                    mime, _ = mimetypes.guess_type(file_path)
                 with open(file_path, "rb") as f:
                     content = f.read()
                 self._set_headers(200, content_type=mime or "application/octet-stream")
