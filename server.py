@@ -38,6 +38,9 @@ class ReconAPIHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self):
         self._set_headers(204)
 
+    def do_HEAD(self):
+        self.do_GET()
+
     def _read_json(self) -> Dict[str, Any]:
         length = int(self.headers.get("Content-Length", 0))
         if length == 0:
